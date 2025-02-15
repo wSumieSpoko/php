@@ -1,0 +1,218 @@
+/* Ogólne style dla body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1, h2 {
+    color: #333;
+    text-align: center;
+}
+
+/* Nagłówki */
+h1 {
+    margin-top: 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+/* Nawigacja po miesiącach */
+div {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+a:hover {
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 3px;
+}
+
+/* Kalendarz */
+table {
+    border-collapse: collapse;
+    width: 80%;
+    max-width: 800px;
+    margin-bottom: 20px;
+}
+
+th, td {
+    width: 14.28%;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+th {
+    background-color: #f0f0f0;
+}
+
+td.empty {
+    background-color: #f9f9f9;
+}
+
+td.selected {
+    background-color: #007bff;
+    color: #fff;
+}
+
+td.today {
+    background-color: #ffeb3b;
+    font-weight: bold;
+}
+
+/* Stylowanie eventów */
+.event-container {
+    margin-top: 10px;
+    max-height: 80px; /* Maksymalna wysokość kontenera */
+    overflow: auto;   /* Dodaj suwak, gdy zawartość przekroczy maksymalną wysokość */
+    padding-right: 5px; /* Zapewni przestrzeń na suwak */
+}
+
+/* Stylowanie wydarzeń */
+.event-container small {
+    display: block;
+    color: #555;
+    font-size: 0.9em;
+}
+
+/* Przyciski usuwania wydarzeń */
+.event-container form {
+    display: inline;
+    margin-top: 5px;
+}
+
+.event-container input[type="submit"] {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 3px 10px;
+    cursor: pointer;
+}
+
+.event-container input[type="submit"]:hover {
+    background-color: #e53935;
+}
+/* Formularz dodawania wydarzenia */
+#eventForm {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin-top: 20px;
+}
+
+#eventForm h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#eventForm input[type="time"],
+#eventForm textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#eventForm input[type="submit"] {
+    width: 48%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#eventForm input#closeButton {
+    width: 48%;
+    background-color: #f44336; /* Czerwony kolor */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+
+
+#eventForm input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Przycisk wylogowania w prawym górnym rogu */
+form#logoutForm {
+    position: absolute;
+    top: 20px; /* Odległość od góry */
+    right: 20px; /* Odległość od prawej krawędzi */
+    margin: 0; /* Usunięcie marginesów */
+}
+
+form#logoutForm input[type="submit"] {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form#logoutForm input[type="submit"]:hover {
+    background-color: #e53935;
+}
+
+/* Kalendarz: Efekt powiększenia kafelka po najechaniu */
+td {
+    width: 14.28%;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #bdb7b7;
+    background-color: #fff;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Płynne przejście */
+}
+
+td:hover {
+    transform: scale(1.1);  /* Powiększenie kafelka */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);  /* Dodanie cienia, aby efekt był bardziej zauważalny */
+}
+
+/* Pozostałe style */
+td.empty {
+    background-color: #f9f9f9;
+}
+
+td.selected {
+    background-color: #007bff;
+    color: #fff;
+}
+
+td.today {
+    background-color: #ffeb3b;
+    font-weight: bold;
+}
+
+
+
